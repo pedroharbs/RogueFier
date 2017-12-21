@@ -23,3 +23,12 @@ Apertando a tecla C, você pode digitar os seguintes comandos.<br>
 ![alt text](https://raw.githubusercontent.com/harbsprog/RogueFier/master/ScreenShoots/RogueFier2.png)<br>
 
 ![alt text](https://raw.githubusercontent.com/harbsprog/RogueFier/master/ScreenShoots/RogueFier3.png)<br>
+
+## Autores:
+    
+* João Pedro Harbs - [GitHub](https://github.com/harbsprog)
+* Jailson Smidi dos Reis
+
+## Licença:
+
+O código a seguir foi criado para propósitos educacionais e seu reuso é aberto a qualquer um que o queira utilizar, com permissões de cópia, criação, distribuição e remoção de partes ou totalidade dele, desde que se deem os devidos créditos aos autores.
