@@ -6,7 +6,7 @@ Este projeto <b>RogueFier - v1.0 Beta</b> foi feito em Linguagem C para a matér
 ## Comandos:
 <b>A, W, S, D :</b> Direcionais para andar
 
-Apertando a tecla C, voc pode digitar os seguintes comandos.<br>
+Apertando a tecla C, você pode digitar os seguintes comandos.<br>
 
 <b>sair!   :<b/> Sai do Game.<br>
 
