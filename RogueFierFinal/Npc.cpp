@@ -1,3 +1,12 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Npc.h"
 
 caractere Item1[50] = "Poção Mágica de Regeneração de Vida (100Pts)\0";
@@ -25,6 +34,7 @@ caractere FraseSelec[6][48] = { "NPC: Eu Sou um Curandeiro Esqueceu ? HaHaHa ...
                                  "NPC: Você Digitou no Começo do Game HaHaHa     ",
                                  "NPC: Sou Esperto o Bastante Para Saber !       " };
 
+//Função para aleatorização de frases.
 void FuncFrase() {
     
     SementeNPC();
@@ -35,11 +45,12 @@ void FuncFrase() {
         }
 }
 
-
+//Função para gerar sementes para o rand().
 void SementeNPC() {
     return srand(time(NULL));
 }
 
+//Função para gerar os NPC's.
 void GeraNpcs() {
 
     SementeNPC();
@@ -49,7 +60,7 @@ void GeraNpcs() {
     }
 }
 
-
+//Função para ajudar o NPC.
 void Ajudar() {
 
     Dir();
@@ -57,6 +68,7 @@ void Ajudar() {
     return;
 }
 
+//Função para direcionamento do NPC.
 void Dir() {
     system("cls");
 
@@ -178,6 +190,7 @@ void Dir() {
     return;
 }
 
+//Função comprar itens do NPC.
 void Comprar() {
 
     npc Item, Selec;
@@ -207,7 +220,7 @@ void Comprar() {
     return;
 }
 
-
+//Função para interface do NPC.
 void EncontraNPC() {
     npc Teste;
     npc Input;
@@ -231,6 +244,7 @@ void EncontraNPC() {
     return;
 }
 
+//Função que verifica se jogador está em cima do NPC.
 void VerificaNPC() {
     if (GuardaLugar == NPC) {
         EncontraNPC();

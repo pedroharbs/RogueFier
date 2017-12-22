@@ -1,3 +1,12 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Main.h"
 
 caracter Explorador[10];
@@ -5,7 +14,7 @@ caracter Explorador[10];
 inteiro main(inteiro argc, caracter** argv){
 LL_01:
 
-  system("title RogueFier v1.0");
+  system("title RogueFier v1.0 Beta");
 		setlocale(LC_ALL, "Portuguese");
 		printf("+------------------------------------------------------------------------------+");
 		printf("+       _____    _____  ____  _   _  _____    ______  __  _____  _____         +");

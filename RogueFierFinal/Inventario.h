@@ -1,12 +1,21 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #ifndef INVENTARIO_H
 #define INVENTARIO_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
-#include <time.h>
-#include "Main.h"
-#include "Jogador.h"
+#include <stdio.h> //printf();, scanf();
+#include <stdlib.h> //system();
+#include <conio.h> //kbhit, getch();
+#include <time.h> //srand, rand();
+#include "Main.h" //Main.
+#include "Jogador.h" //Funções Jogador.
 
 typedef char chr;
 typedef int inventario;
@@ -22,5 +31,6 @@ extern chr Espaco8[20];
 extern chr Espaco9[20];
 extern chr Espaco10[20];
 
+//Função para interface do inventário.
 void Inventario();
 #endif

@@ -1,3 +1,12 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Interface.h"
 
 interfaces Interface[24][79] = {
@@ -26,7 +35,7 @@ interfaces Interface[24][79] = {
 "|                            ||                        ||                    |",
 "+----------------------------++------------------------++--------------------+" };
 
-
+//Função que desenha interface.
 void FuncsInterface() {
 	MoveCursor(0, 0);
 
@@ -38,6 +47,7 @@ void FuncsInterface() {
 	}
 }
 
+//Função de impressão dos marcadores vitais.
 void Marcadores() {
 
 	pVitais Vita;

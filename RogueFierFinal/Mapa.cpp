@@ -1,5 +1,15 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Mapa.h"
 
+//Função para gerar sementes para o rand().
 void Semente() {
 	return srand(time(NULL));
 }
@@ -11,6 +21,7 @@ mapeamento MapaFimX = 261;
 mapeamento MapaIniY = 237;
 mapeamento MapaFimY = 265;
 
+//Função para gerar caracteres no mapa.
 void GeradorMapa(){
 
 	Semente();
@@ -40,6 +51,7 @@ for (mapeamento dx = 0; dx < WORLD_SIZE; dx++) { //Gera Borda Eixo X BAIXO
 
 }
 
+//Função que gera a cidade.
 caractere GeraCidade(mapeamento cx, mapeamento cy) {
     caractere *p;
     caractere Cidade = CIDADE;
@@ -55,6 +67,7 @@ caractere GeraCidade(mapeamento cx, mapeamento cy) {
 
 }
 
+//Função para gerar Tesouros, Armaduras e Tesouros Espciais.
 void GeraTesouros() {
 
 		Semente();
@@ -77,6 +90,7 @@ void GeraTesouros() {
 
 }
 
+//Função que verifica se jogador está em cima do Tesouro.
 void VerificaTesouro() {
 
  Semente();
@@ -103,7 +117,7 @@ void VerificaTesouro() {
 
 }
 
-
+//Função para desenhar o mapa.
 void DesenhaMapa(){
 
 	for (mapeamento x = MapaIniX; x <= MapaFimX; x++) //Desenha Mapa Eixo X
@@ -175,6 +189,7 @@ void DesenhaMapa(){
 
 }
 
+//Função para movimento do mapa.
 void MoveMapa(caractere Mapa[WORLD_SIZE][WORLD_SIZE], mapeamento y1, mapeamento y2, mapeamento x1, mapeamento x2){
 	FuncsInterface();
 	Marcadores();
@@ -244,7 +259,7 @@ void MoveMapa(caractere Mapa[WORLD_SIZE][WORLD_SIZE], mapeamento y1, mapeamento 
 	}
 }
 
-
+//Função que chama funções de mapa no main.
 void FuncsMapa() {
 	GeradorMapa();
 	GeraMonstros();
@@ -252,6 +267,6 @@ void FuncsMapa() {
 	GeraNpcs();
 	GeraCidade(251, 251);
 	GuardaLugar = Mapa[JogadorX][JogadorY];
- CriaJogador(JogadorX, JogadorY);
- DesenhaMapa();
+ 	CriaJogador(JogadorX, JogadorY);
+ 	DesenhaMapa();
 }

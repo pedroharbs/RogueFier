@@ -1,5 +1,15 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Monstro.h"
 
+//Função para esperar certo tempo quando necessario.
 void sleep(time_t delay) {
 	time_t timer0, timer1;
 	time(&timer0);
@@ -20,10 +30,12 @@ chrm ItemM4[20] = "Chifres Demoniacos\0";
 chrm ItemM5[20] = "Cebo de Monstro\0";
 chrm Recompensa[20] = "\0";
 
+//Função para gerar sementes para o rand().
 void SementeMonstro() {
      return srand(time(NULL));
 }
 
+//Função que gera os monstros.
 void GeraMonstros() {
 
 		SementeMonstro();
@@ -33,6 +45,7 @@ void GeraMonstros() {
 			}
 }
 
+//Função de danos personagem e monstro.
 void Danos() {
     //Dano do Personagem
 
@@ -109,7 +122,7 @@ void Danos() {
  return;
 }
 
-
+//Função fuga da batalha.
 void Fugir() {
 	monstro  MaxDano, MinDano, VidaChar, Dano;
 	MaxDano = 20;
@@ -146,7 +159,7 @@ void Fugir() {
 
 
 
-
+//Função para a interface de batalha.
 void EncontroMonstro() {
     VidaMonstros = 65;
 
@@ -164,6 +177,7 @@ void EncontroMonstro() {
 	return;
 }
 
+//Função que verifica se jogador está em cima do monstro.
 void VerificaMonstro() {
 	if (GuardaLugar == INIMIGO) {
 		EncontroMonstro();

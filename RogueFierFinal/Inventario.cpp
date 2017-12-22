@@ -1,3 +1,12 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Inventario.h"
 
 inventario Item, ItemA, ItemB;
@@ -12,7 +21,7 @@ chr Espaco8[20] = "Vazio";
 chr Espaco9[20] = "Vazio";
 chr Espaco10[20] = "Vazio";
 
-
+//Função para interface do inventário.
 void Inventario() {
 
     printf("-=(Inventário de %s)=-\n", Explorador);

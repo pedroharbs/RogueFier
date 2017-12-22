@@ -1,5 +1,15 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Jogador.h"
 
+//Função para gerar sementes para o rand().
 void Semente();
 jogador Vida = 100;
 jogador Estafa = 100;
@@ -20,7 +30,7 @@ jogador Key;
 carac GuardaLugar;
 jogador ContaProvimentos = 0;
 
-
+//Função que cria o jogador.
 carac CriaJogador(jogador x, jogador y){
 	carac *p;
 	carac Jogador = PERSONAGEM;
@@ -30,7 +40,7 @@ carac CriaJogador(jogador x, jogador y){
 	return Mapa[x][y] = *p;
 }
 
-
+//Função que move o jogador.
 char MoveJogador(jogador CordX, jogador CordY, jogador NovaCordX, jogador NovaCordY, carac Mapa[WORLD_SIZE][WORLD_SIZE], carac Lugar){
 
 	Mapa[CordX][CordY] = Lugar;
@@ -40,6 +50,7 @@ char MoveJogador(jogador CordX, jogador CordY, jogador NovaCordX, jogador NovaCo
 	return Mapa[CordX][CordY], Lugar;
 };
 
+//Função para verificar se jogador morre por fome, sede, cansaço ou violência.
 void JogadorVitais() {
 
     if (Vida == 0) {
@@ -96,6 +107,8 @@ void JogadorVitais() {
     }
  }
 
+
+//Função para contar passos e decrementar pontos vitais.
  void ContadorProvimentos() {
 
      if(ContaProvimentos == 50){Estafa -= 2; Comida -= 1; Agua -= 1;}
@@ -122,6 +135,7 @@ void JogadorVitais() {
 
  }
 
+//Função para chamar verificaçõe de cidade, tesouro, npc, inimigo, etc.
  void Verificacoes() {
      VerificaCidade();
      VerificaNPC();
@@ -130,11 +144,13 @@ void JogadorVitais() {
      ContaProvimentos += 1;
  }
 
+//Função para mover jogador.
  void ChamaFuncsMover() {
      Mapa[JogadorX][JogadorY], GuardaLugar = MoveJogador(JogadorX, JogadorY, NovaCordX, NovaCordY, Mapa, GuardaLugar);
      MoveMapa(Mapa, y1, y2, x1, x2);
  }
 
+//Função que verifica tecla apertada.
  void PegaTeclas(){
 
      carac MSG1[24] = "Fim das Terras de Fier!";
@@ -274,7 +290,7 @@ void JogadorVitais() {
      JogadorY = NovaCordY;
  }
 
-
+//Função para facilitar chamada de outras funções.
  void Comandos() {
      FuncsInterface();
      MoveCursor(0, 0);
@@ -282,6 +298,7 @@ void JogadorVitais() {
      Marcadores();
  }
 
+//Função que verifica se jogador aposentou.
  void Aposentadoria() {
 
      if (Nivel == 65) {

@@ -1,9 +1,20 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Cidade.h"
 
+//Função para gerar sementes para o rand().
 void SementeCidade() {
     return srand(time(NULL));
 }
 
+//Função que verifica se jogador está em cima da cidade.
 void VerificaCidade() {
     if (GuardaLugar == CIDADE) {
         CidadeNPC();
@@ -12,6 +23,7 @@ void VerificaCidade() {
 
 cidade pcvida = 0, pcestafa = 0, pmaca = 0, pgarrafa = 0, parmadura = 0;
 
+//Função vender itens na cidade.
 void VenderCidade(){
 
     cidade Item;
@@ -51,6 +63,7 @@ void VenderCidade(){
     return;
 }
 
+//Função para recarregar pontos vitais na cidade.
 void RecarregarCidade() {
 
     system("CLS");
@@ -99,7 +112,7 @@ void RecarregarCidade() {
 
 }
 
-
+//Função que chama interface da cidade.
 void CidadeNPC(){
 
     npc Input;

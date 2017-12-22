@@ -1,9 +1,19 @@
+/**
+ * \file
+ * \brief RogueFier - v1.0 Beta 
+ * \author João Pedro HArbs
+ * \author Jailson Smidi dos Reis
+ * \version 1.0 Beta
+ * \date 21 dezembro 2017
+*/
+
 #include "Ranking.h"
 
 crt guardanome[10];
 rkg guardapts;
 Ranking Rank[100];
 
+//Função que le e ordena o ranking no inicio.
 void LeArquivoInicio() {
 
     FILE *Fluxo;
@@ -76,6 +86,7 @@ void LeArquivoInicio() {
     return;
 }
 
+//Função que grava usuário no ranking.
 void GravaRanking() {
 
     FILE *Fluxo;
@@ -92,6 +103,7 @@ void GravaRanking() {
 
 }
 
+//Função que le e ordena o ranking no final.
 void LeArquivoFinal() {
 
     FILE *Fluxo;
@@ -162,6 +174,7 @@ void LeArquivoFinal() {
     }
 }
 
+//Função para chamar ranking no final.
 void FuncsRank() {
     GravaRanking();
     LeArquivoFinal();
